@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<button onclick="getNames()">Get Names</button>
+<script>
+var urlNames="http://www.example.com/api/get/1";
+
+function getNames(){
+getData(urlNames,showNames);
+}
+function showNames(data){
+console.log(data);
+}
+function getData(url,fnResponse){
+fetch(url)
+.then(response=>{
+return response.json();
+})
+.then(fnResponse)
+.catch(err=>console.log(err));
+}
+</script> 
+</body>
+</html>

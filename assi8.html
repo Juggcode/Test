@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+var obj = [{
+ "id" : 4, "name" : "abc"},
+ {"id" : 10, "name" : "ab2"},
+ {"id" : 5, "name" : "abc3"},
+ {"id" : 6, "name" : "abc5"}];
+ 
+ 
+obj.sort(compareId);
+console.log(obj);
+
+function compareId(id1,id2){
+return id1.id-id2.id;
+}
+</script>
+</body>
+</html> 
